@@ -24,7 +24,7 @@ async def change_status():
 #categorie
 @client.group(invoke_without_command=True)
 async def help(ctx):
-  em = discord.Embed(title = "Help", description = "Usa m.help <comando> per le informazioni su quel comando.", color = ctx.author.color)
+  em = discord.Embed(title = "Help", description = "Usa m.help <comando> per avere informazioni su quel comando.", color = ctx.author.color)
 
   em.add_field(name = "Comandi", value = "TiroPA - Passaggio - Dribbling - Contrasto - Tiro")
 
@@ -34,7 +34,7 @@ async def help(ctx):
 @help.command()
 async def tiropa(ctx):
 
-  em = discord.Embed(title = "TiroPA", description = "Usalo per tirare in palla avvelenata! - Colpito = Hai colpito l'avversario - Bloccata = Il tuo avversario ha bloccato il tiro - Bersaglio Mancato = Hai sbagliato la mira e non hai colpito - E' consigliato scrivere il nome di chi vuoi colpire per semplificare le cose mentre si gioca. (esempio: m.tiro Poyos)")
+  em = discord.Embed(title = "TiroPA", description = "Usalo per tirare (Sport: Palla Avvelenata)! - Colpito = Hai colpito l'avversario - Bloccata = Il tuo avversario ha bloccato il tiro - Bersaglio Mancato = Hai sbagliato la mira e non hai colpito - E' consigliato scrivere il nome di chi vuoi colpire per semplificare le cose mentre si gioca. (esempio: m.tiro Poyos)")
 
   em.add_field(name = "**Syntax**", value = "m.tiropa")
 
@@ -43,7 +43,7 @@ async def tiropa(ctx):
 @help.command()
 async def passaggio(ctx):
 
-  em = discord.Embed(title = "Passaggio", description = "Usalo per passare la palla a calcio! - Palla passata = Hai passato la palla al tuo compagno - Palla intercettata = Hai sbagliato il passaggio e un avversario ha intercettato il passaggio - Qui sta a te decidere se vuoi anche scrivere il nome del tuo compagno al quale vuoi passare la palla")
+  em = discord.Embed(title = "Passaggio", description = "Usalo per passare la palla (Sport: Calcio)! - Palla passata = Hai passato la palla al tuo compagno - Palla intercettata = Hai sbagliato il passaggio e un avversario ha intercettato il passaggio - Qui sta a te decidere se vuoi anche scrivere il nome del tuo compagno al quale vuoi passare la palla")
 
   em.add_field(name = "**Syntax**", value = "m.passaggio")
 
@@ -52,7 +52,7 @@ async def passaggio(ctx):
 @help.command()
 async def dribbling(ctx):
 
-  em = discord.Embed(title = "Dribbling", description = "Usalo se vuoi provare a dribblare un avversario a calcio! - Avversario Superato = Sei riuscito a dribblare l'avversario - Dribbling non riuscito = Non sei riuscito a superare l'avversario, che ha recuperato il pallone - Fallo subito = Nel cercare di non farsi dribblare da te, l'avversario ha commesso fallo - Fallo commesso = Nel tentativo di superare l'avversario, hai usato troppo il fisico e hai commesso fallo")
+  em = discord.Embed(title = "Dribbling", description = "Usalo se vuoi provare a dribblare un avversario (Sport: Calcio)! - Avversario Superato = Sei riuscito a dribblare l'avversario - Dribbling non riuscito = Non sei riuscito a superare l'avversario, che ha recuperato il pallone - Fallo subito = Nel cercare di non farsi dribblare da te, l'avversario ha commesso fallo - Fallo commesso = Nel tentativo di superare l'avversario, hai usato troppo il fisico e hai commesso fallo")
 
   em.add_field(name = "**Syntax**", value = "m.dribbling")
 
@@ -60,7 +60,7 @@ async def dribbling(ctx):
 @help.command()
 async def contrasto(ctx):
 
-  em = discord.Embed(title = "Contrasto", description = "Usalo se vuoi provare a contrastare un avversario che si avvicina alla porta a calcio! - Contrasto riuscito = Sei riuscito a usare il fisico per riprendere il pallone - Contrasto non riuscito = Non sei riuscito a recuperare il pallone e l'avversario ti ha superato - Fallo commesso = Hai usato troppo il fisico/hai mosso male la gamba/piede per recuperare il pallone e hai commesso fallo sull'avversario - Fallo subito = Mentre cercavi di recuperare la palla, l'avversario per proteggerla ha usato troppo il fisico, commettendo fallo su di te")  
+  em = discord.Embed(title = "Contrasto", description = "Usalo se vuoi provare a contrastare un avversario e recuperare il pallone (Sport: Calcio)! - Contrasto riuscito = Sei riuscito a usare il fisico per riprendere il pallone - Contrasto non riuscito = Non sei riuscito a recuperare il pallone e l'avversario ti ha superato - Fallo commesso = Hai usato troppo il fisico/hai mosso male la gamba/piede per recuperare il pallone e hai commesso fallo sull'avversario - Fallo subito = Mentre cercavi di recuperare la palla, l'avversario per proteggerla ha usato troppo il fisico, commettendo fallo su di te")  
 
   em.add_field(name = "**Syntax**", value = "m.contrasto")
 
@@ -69,7 +69,7 @@ async def contrasto(ctx):
 @help.command()
 async def tiro(ctx):
 
-  em = discord.Embed(title = "Tiro", description = "Usalo quando vuoi tirare a calcio! - Gol = Hai tirato e sei riuscito a segnare - Parata = Hai provato a segnare ma il portiere avversario l'ha parata - Palo/Traversa = Hai provato a tirare ma hai colptio il palo o la traversa - Tiro fuori = Hai tirato male e la palla è andata fuori - Questo comando si può usare sia su azione che su punizioni e rigori")  
+  em = discord.Embed(title = "Tiro", description = "Usalo quando vuoi tirare (Sport: Calcio)! - Gol = Hai tirato e sei riuscito a segnare - Parata = Hai provato a segnare ma il portiere avversario l'ha parata - Palo/Traversa = Hai provato a tirare ma hai colptio il palo o la traversa - Tiro fuori = Hai tirato male e la palla è andata fuori - Questo comando si può usare sia su azione che su punizioni e rigori")  
 
   em.add_field(name = "**Syntax**", value = "m.tiro")
 
