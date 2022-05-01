@@ -8,7 +8,7 @@ from itertools import cycle
 
 #clients
 client = commands.Bot(command_prefix="m.")
-status = cycle(['Fai m.help per vedere i vari comandi!'])
+status = cycle(['Fai m.help per vedere i vari comandi!', 'I miei comandi servono per giocare a diversi sport su Discord!'])
 
 client.remove_command("help")
 
