@@ -26,7 +26,7 @@ async def change_status():
 async def help(ctx):
   em = discord.Embed(title = "Help", description = "Usa m.help <comando> per avere informazioni su quel comando.", color = ctx.author.color)
 
-  em.add_field(name = "Comandi", value = "TiroPA - Passaggio - Dribbling - Contrasto - Tiro")
+  em.add_field(name = "Comandi", value = "TiroPA - Passaggio - Dribbling - Contrasto - Tiro - Fallo")
 
   await ctx.send(embed = em)
 
@@ -75,6 +75,15 @@ async def tiro(ctx):
 
   await ctx.send(embed = em)
 
+@help.command()
+async def fallo(ctx):
+
+  em = discord.Embed(title = "Fallo", description = "Da usare quando c'è un fallo (Sport: Calcio) - Può essere usato solo dall'insegnante di Motoria - Serve all'insegnante per decidere se un fallo è da cartellino o no - No cartellino = E' un normale fallo, nessun cartellino per chi l'ha commesso. - Giallo = Il fallo merita il cartellino giallo. Chi l'ha commesso deve stare più attento ora! - Rosso = E' un brutto fallo, e chi l'ha commesso deve essere espulso! - Normalmente andrebbe usato solo se viene commesso un fallo con m.contrasto, ma talvolta può servire anche con falli commessi da altri comandi, se chi l'ha commesso ne ha fatti già altri (ma in questo caso è solo se c'è un dubbio tra no cartellino e giallo, per cui se esce rosso, è meglio rifare il comando).")  
+
+  em.add_field(name = "**Syntax**", value = "m.fallo")
+
+  await ctx.send(embed = em)  
+
 #lista comandi
   
 
@@ -112,6 +121,14 @@ async def tiro(ctx):
    'Parata',
    'Palo/Traversa', 'Tiro fuori']
   await ctx.send(f'{random.choice(tiro_responses)}')
+
+@commands.has_role("Roleplay Staff")  
+@client.command()
+async def fallo(ctx):
+  fallo_responses = ['No Cartellino',
+   'Giallo',
+   'Rosso']
+  await ctx.send(f'{random.choice(fallo_responses)}')
   
 keep_alive()
 client.run('XXX') #XXX = Inserisci il token del bot
