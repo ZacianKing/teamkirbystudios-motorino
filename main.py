@@ -130,5 +130,10 @@ async def fallo(ctx):
    'Rosso']
   await ctx.send(f'{random.choice(fallo_responses)}')
   
+@fallo.error
+async def fallo_error(ctx, error):
+  if isinstance(error, commands.MissingRole):
+    await ctx.send("Non hai il role per poter usare questo comando!")
+  
 keep_alive()
 client.run('XXX') #XXX = Inserisci il token del bot
