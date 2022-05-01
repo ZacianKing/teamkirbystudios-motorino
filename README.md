@@ -19,3 +19,5 @@ Ci sono 17 passi da seguire:
 15. In basso a destra c'è il tasto "Create Monitor" e ricliccate di nuovo (che è giallo).
 16. Ora tocca invitare il bot nel vostro server discord, potete in 2 modi: farlo su Discord Developer Portal o su Discord Permission Calculator (se non riuscite a farlo, cercate su YouTube "how to invite my bot to my discord server from discord developer portal".
 17. Durante la giornata, se vedrete il vostro bot offline, non preoccupatevi, si risolverà da solo (se è offline per 2 giorni consecutivi o più, controllate su Replit e UptimeRobot).
+
+Il comando m.fallo funziona solo se chi lo fa ha il role "Roleplay Staff", per cui create un ruolo con questo nome, oppure modificate il comando, cambiando in main.py "Roleplay Staff" con il role che volete (al momento lo trovate nella riga 125, ma potrebbe cambiare quindi cercatelo bene).
