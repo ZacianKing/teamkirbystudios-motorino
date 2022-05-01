@@ -32,11 +32,11 @@ async def help(ctx):
 
 #helps
 @help.command()
-async def wip(ctx):
+async def tiro(ctx):
 
   em = discord.Embed(title = "Tiro", description = "Palla Avvelenata della Prof.ssa Pyra")
 
-  em.add_field(name = "**Syntax**", value = "mo.wip")
+  em.add_field(name = "**Syntax**", value = "mo.tiro")
 
   await ctx.send(embed = em)
 
