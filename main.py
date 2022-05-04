@@ -26,30 +26,79 @@ async def change_status():
 async def help(ctx):
   em = discord.Embed(title = "Help", description = "usa mo.help <comando> per l'informazioni di questo comando.", color = ctx.author.color)
 
-  em.add_field(name = "Comandi", value = "tiro")
+  em.add_field(name = "Giochi", value = "pa - calcio - basket")
+
+  em.add_field(name = "Informazioni", value = "github")
 
   await ctx.send(embed = em)
 
 #helps
 @help.command()
-async def tiro(ctx):
+async def pa(ctx):
 
-  em = discord.Embed(title = "Tiro", description = "Palla Avvelenata della Prof.ssa Pyra")
+  em = discord.Embed(title = "Palla Avvelenata", description = "Palla Avvelenata della Prof.ssa Pyra")
 
-  em.add_field(name = "**Syntax**", value = "mo.tiro")
+  em.add_field(name = "**Syntax**", value = "mo.pa")
+
+  await ctx.send(embed = em)
+
+@help.command()
+async def calcio(ctx):
+
+  em = discord.Embed(title = "Calcio", description = "Il calcio della Prof.ssa Pyra")
+
+  em.add_field(name = "**Syntax**", value = "mo.calcio")
+
+  await ctx.send(embed = em)
+
+@help.command()
+async def basket(ctx):
+
+  em = discord.Embed(title = "Basket", description = "Il basket della Prof.ssa Pyra")
+
+  em.add_field(name = "**Syntax**", value = "mo.basket")
+
+  await ctx.send(embed = em)
+
+@help.command()
+async def github(ctx):
+
+  em = discord.Embed(title = "GitHub", description = "link GitHub per il codice di questo BOT")
+
+  em.add_field(name = "**Syntax**", value = "mo.github")
 
   await ctx.send(embed = em)
 
 #lista comandi
-  
+@client.command()
+async def github(ctx):
+  await ctx.send("GitHub link: https://github.com/ZacianKing/teamkirbystudios-motorino")
 
 #Random words
 @client.command()
-async def tiro(ctx):
-  tiro_responses = ['Hit',
-   'Block',
-   'Miss']
+async def pa(ctx):
+  tiro_responses = ['Colpito',
+   'Bloccato',
+   'Schivato']
+  await ctx.send(f'{random.choice(tiro_responses)}')
+
+@client.command()
+async def calcio(ctx):
+  tiro_responses = ['GOL',
+   'Tiro bloccato',
+   'Giocatore schivato',
+   'Fallo (Cartellino Giallo)',
+   'Fallo (Cartellino Rosso)',
+   'Dribbla']
+  await ctx.send(f'{random.choice(tiro_responses)}')
+
+@client.command()
+async def basket(ctx):
+  tiro_responses = ['Canestro (+2 Punti)',
+   'Canestro (+3 Punti)',
+   'Giocatore schivato',
+   'Palleggia']
   await ctx.send(f'{random.choice(tiro_responses)}')
 
 keep_alive()
-client.run('XXX') #XXX = Inserisci il token del bot
+client.run('XXX') #XXX <- Mettete il token del vostro bot
